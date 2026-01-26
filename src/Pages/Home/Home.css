@@ -1,0 +1,11 @@
+.contianer{
+    padding: 20px;
+    transition: all 0.3s ease;
+    z-index: -5;
+}
+
+.contianer.large-container{
+    margin-left:15% ;
+    padding: 20px;
+    
+}

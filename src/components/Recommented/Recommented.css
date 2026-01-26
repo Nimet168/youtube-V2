@@ -1,0 +1,40 @@
+.recommented{
+    flex-basis: 30%;
+}
+
+.side-video-list{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    gap: 16px;
+}
+
+.side-video-list img{
+    flex-basis: 49%;
+    width:50%;
+    border-radius: 10px;
+    object-fit:cover
+}
+
+.video-info{
+    flex-basis:49%;
+}
+.video-info h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600;
+
+}
+
+.video-info p{
+    color: #5a5a5a;
+    font-size: 12px;
+}
+@media only screen and (max-width: 1300px){
+    .video-info h4{
+        white-space: nowrap; 
+        width: 120px; 
+        overflow: hidden;
+        text-overflow:ellipsis; 
+    }
+}
