@@ -16,6 +16,7 @@ import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
 
 const Sidebar = ({sidebarOpen,category,setCategory}) => {
+    
   return (
     <div className={`sidebar ${sidebarOpen ? 'open' : 'close'}`}>
         <div className="shortcut-links">

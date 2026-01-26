@@ -30,11 +30,13 @@ const PlayVideo = ({videoId}) => {
 
     useEffect(()=>{
         fetchVideoData();
-    },[])
+    },[videoId])
 
     useEffect(()=>{
-        fetchOtherData();
-    },[])
+        if(apiData){
+            fetchOtherData();
+        }
+    },[apiData])
     // Hide Description
     const [isExpanded,setIsExpanded]=useState(false)
     const toggleDescription=()=>{

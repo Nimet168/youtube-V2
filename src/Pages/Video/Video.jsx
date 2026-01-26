@@ -12,7 +12,7 @@ const Video = ({sidebarOpen}) => {
     <Sidebar sidebarOpen={sidebarOpen}/>
     <div className='play-container'>
         <PlayVideo videoId={videoId}/>
-        <Recommented/>
+        <Recommented category={categoryId}/>
     </div>
     </>
   )

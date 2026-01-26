@@ -10,7 +10,7 @@ const Feed = ({category}) => {
     const [data,setData]=useState([])
 
     const fetchData=async()=>{
-        const videoList_url =`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
+        const videoList_url =`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=KH&videoCategoryId=${category}&key=${API_KEY}`
         await fetch(videoList_url).then(Response=>Response.json()).then(data=>setData(data.items))
     }
     useEffect(()=>{
@@ -20,7 +20,7 @@ const Feed = ({category}) => {
     <div className='feed'>
         {data.map((item,index)=>{
             return(
-                <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="card">
+                <Link key={index} to={`/video/${item.snippet.categoryId}/${item.id}`} className="card">
                     <img src={item.snippet.thumbnails.medium.url} alt="" />
                     <h2>{item.snippet.title}</h2>
                     <h3>{item.snippet.channelTitle}</h3>
